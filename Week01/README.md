@@ -7,7 +7,7 @@ main函数要点：
 - 无参数、无返回值
 - main方法必须要在main包里面
 - `go run main.go`就可以执行
-- 如果文件不叫`main.go`，则需要`go build`得到可运行的文件，直接运行就可以。
+- 如果文件不叫 `main.go`，则需要 `go build`得到可运行的文件，直接运行就可以。
 
 包声明：
 
@@ -25,7 +25,7 @@ string常量：
 string长度计算：
 
 - `len(str)`输出的是字节长度，和编码无关
-- 需要其他编码相关的方法,比如`utf8.RuneCountInString`
+- 需要其他编码相关的方法,比如 `utf8.RuneCountInString`
 
 string拼接：
 
@@ -64,14 +64,13 @@ Byte类型：
 - golang使用类型推断来推断类型。数字会被理解为int或者float64。（所以要其他类型的数字，就得用var来声明）
 - 变量声明后必须使用
 - 同作用域下，一个变量只能使用一次。
-- 常量声明只需把`var`改为`const`即可
-
+- 常量声明只需把 `var`改为 `const`即可
 
 方法声明：
 
 - `func name(name type)(name type, name type){}`
 - 方法的首字符是否大写同样决定了作用域
-- 若返回值只有类型，没有名字，可以return a,b 
+- 若返回值只有类型，没有名字，可以return a,b
 - 若返回值有名字，可以给其名字赋值后直接返回
 - 用到不定参数时，不定参数要放在最后面
 - 使用_忽略返回值
@@ -81,7 +80,6 @@ Byte类型：
 - 声明： `var name [cap]type`
 - 初始化时要指定长度
 - len(name)和cap(name)操作用于获取数组长度
-
 
 切片：
 
@@ -118,6 +116,49 @@ Byte类型：
 - switch中，一个case后可以跟多个常量，用都好隔开
 - 可以switch结构体，但是一般不会
 
-## type定义与Server抽象
 
+# HTTP 库
 
+- Body只能读一次
+- GetBody默认返回nil，但是可以修改其返回值，实现多次读取的目的
+- request url里面很多是空
+- request header会自动格式化
+- 使用form之前需要调用parseForm
+
+# Type 用法
+
+## type定义
+
+- type name interface{}
+
+  接口一般对外开放，所以名字大写
+
+  接口是一组行为的抽象，里面只能有方法，方法不需要func关键字
+- type name struct{}
+- type a b
+
+  a不能使用b的方法，若要使用，需要通过显式类型转换
+- type a=b
+
+  a可以使用b的方法，a相当于b的别名，一般不用
+
+## 结构体初始化
+
+- go没有构造函数
+- 初始化语法：
+  - name{}
+  - &name{}
+  - var name structName
+  - var name *structName会panic
+  - 可以按字段赋值，也可以按顺序赋值（不推荐）
+- 自引用只能使用指针
+- 必须有实例才能调用方法（与包不同）
+- 结构体接收器不会改变原来的值，指针接收器会改变原来的值（无论是普通的实例还是指针的实例）
+
+## 结构体如何实现接口
+
+一个结构体具备接口的所有方法时，它就实现了这个接口。
+
+## 其他工程问题
+
+- golang不支持重写
