@@ -8,11 +8,11 @@
 
 采用本学期学校数据库实验的一个案例，db_lab数据库下students1表格定义如下：
 
-![image-20211227173107875](/home/yuyangz/.config/Typora/typora-user-images/image-20211227173107875.png)
+![image-20211227173107875](./img/image-20211227173107875.png)
 
 表格中的信息如下：
 
-![image-20211227172759565](/home/yuyangz/.config/Typora/typora-user-images/image-20211227172759565.png)
+![image-20211227172759565](./img/image-20211227172759565.png)
 
 ## 运行情况
 
@@ -20,4 +20,4 @@
 
 运行结果如下：
 
-![image-20211227180803399](/home/yuyangz/.config/Typora/typora-user-images/image-20211227180803399.png)
+![image-20211227180803399](./img/image-20211227180803399.png)

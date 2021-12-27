@@ -99,20 +99,20 @@ fmt.Printf("errgroup exiting: %+v\n", group.Wait())
 
 访问homepage
 
-![image-20211227224125775](/home/yuyangz/.config/Typora/typora-user-images/image-20211227224125775.png)
+![image-20211227224125775](./img/image-20211227224125775.png)
 
 访问shutdown page
 
-![image-20211227224151956](/home/yuyangz/.config/Typora/typora-user-images/image-20211227224151956.png)
+![image-20211227224151956](./img/image-20211227224151956.png)
 
-![image-20211227224216897](/home/yuyangz/.config/Typora/typora-user-images/image-20211227224216897.png)
+![image-20211227224216897](./img/image-20211227224216897.png)
 
 interrupt的情况
 
-![image-20211227224046168](/home/yuyangz/.config/Typora/typora-user-images/image-20211227224046168.png)
+![image-20211227224046168](./img/image-20211227224046168.png)
 
 terminate的情况
 
-![image-20211227225353328](/home/yuyangz/.config/Typora/typora-user-images/image-20211227225353328.png)
+![image-20211227225353328](./img/image-20211227225353328.png)
 
-![image-20211227225425849](/home/yuyangz/.config/Typora/typora-user-images/image-20211227225425849.png)
+![image-20211227225425849](./img/image-20211227225425849.png)
